@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fake Message Detection</title>
+	<style>
+		body {
+    		background-color: #E8CEBF;
+		}
+		h2 {
+    		color: #4F4846;
+    		text-align: center;
+    		font-family: Georgia, serif;
+		}
+		.ml-container {
+			text-align: center;
+			font-family: Georgia, serif;
+		}
+		.btn-info {
+			background-color: #266150;
+			border-radius: 12px;
+			color: white;
+			font-size: 18px;
+			width: 100px;
+			height: 30px;
+			font-family: Georgia, serif;
+		}
+		.btn-info:hover {
+			background-color: white;
+			color: #266150;
+			border-color: #266150;
+
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h2>Fake Message Detector</h2>
+		</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+			<p>Enter your message here</p>
+			<textarea name="message" rows="6" cols="50" required></textarea>
+			<br>
+			<br>
+			<button type="submit" class="btn-info" value="Predict">Predict</button>
+		</form>
+		
+	</div>
+</body>
+</html>
